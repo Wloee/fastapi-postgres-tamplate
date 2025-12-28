@@ -1,0 +1,34 @@
+# ============================================================================
+# DEPENDENCIES UNTUK FASTAPI + POSTGRESQL PROJECT
+# ============================================================================
+# File ini berisi semua dependencies yang dibutuhkan untuk menjalankan aplikasi
+# Install dengan: pip install -r requirements.txt
+# ============================================================================
+
+# Web Framework
+fastapi==0.104.1          # Framework utama untuk membuat REST API
+uvicorn[standard]==0.24.0 # ASGI server untuk menjalankan FastAPI
+
+# Database
+sqlalchemy==2.0.23        # ORM (Object Relational Mapper) untuk database
+psycopg2-binary==2.9.9    # PostgreSQL adapter untuk Python
+alembic==1.12.1           # Database migration tool
+
+# Validation & Serialization
+pydantic==2.5.0           # Data validation menggunakan Python type hints
+pydantic-settings==2.1.0  # Settings management dengan Pydantic
+
+# Security
+passlib[bcrypt]==1.7.4    # Password hashing library
+python-jose[cryptography]==3.3.0  # JWT token generation & validation
+python-multipart==0.0.6   # Untuk handle form data & file uploads
+
+# Utilities
+python-dotenv==1.0.0      # Loqad environment variables dari .env file
+email-validator==2.1.0    # Validasi format email
+
+# Development & Testing (optional)
+pytest==7.4.3             # Testing framework
+httpx==0.25.2             # HTTP client untuk testing API
+black==23.12.0            # Code formatter
+flake8==6.1.0             # Linter untuk code quality

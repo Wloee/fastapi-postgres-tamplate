@@ -1,0 +1,265 @@
+# ============================================================================
+# GITIGNORE FOR FASTAPI + POSTGRESQL PROJECT
+# ============================================================================
+
+# ============================================================================
+# PYTHON
+# ============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff (if needed):
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff (if needed):
+instance/
+.webassets-cache
+
+# Scrapy stuff (if needed):
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff (if needed)
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Virtual Environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ============================================================================
+# ENVIRONMENT VARIABLES
+# ============================================================================
+# IMPORTANT: Never commit .env file!
+.env
+.env.local
+.env.*.local
+
+# ============================================================================
+# DATABASE
+# ============================================================================
+# SQLite database (if using SQLite for testing)
+*.db
+*.sqlite
+*.sqlite3
+
+# PostgreSQL dump files
+*.sql
+*.dump
+
+# ============================================================================
+# IDE & EDITORS
+# ============================================================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================================================
+# OPERATING SYSTEM
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ============================================================================
+# LOGS & TEMPORARY FILES
+# ============================================================================
+logs/
+*.log
+*.log.*
+tmp/
+temp/
+
+# ============================================================================
+# ALEMBIC
+# ============================================================================
+# Don't ignore alembic directory, but ignore __pycache__
+# alembic/__pycache__/ is already covered by __pycache__/ above
+
+# ============================================================================
+# PROJECT SPECIFIC
+# ============================================================================
+# Uploads folder (if you have file uploads)
+uploads/
+static/uploads/
+
+# Media files
+media/
+
+# Backup files
+*.bak
+*.backup
+
+# ============================================================================
+# DOCKER (if using Docker)
+# ============================================================================
+docker-compose.override.yml
+.dockerignore
+
+# ============================================================================
+# CI/CD
+# ============================================================================
+.github/
+.gitlab-ci.yml
+
+# ============================================================================
+# NOTES
+# ============================================================================
+"""
+IMPORTANT FILES TO COMMIT:
+✓ .env.example - Template for environment variables
+✓ .gitignore - This file
+✓ requirements.txt - Python dependencies
+✓ alembic.ini - Alembic configuration
+✓ alembic/versions/ - Database migrations
+✓ README.md - Project documentation
+
+NEVER COMMIT:
+✗ .env - Contains sensitive data (passwords, secret keys)
+✗ __pycache__/ - Python cache
+✗ *.pyc - Compiled Python files
+✗ venv/ - Virtual environment
+✗ .vscode/ - IDE settings (optional to commit)
+
+Git Commands:
+
+1. Check what's ignored:
+   git status --ignored
+
+2. Force add ignored file (be careful!):
+   git add -f filename
+
+3. Remove already tracked file:
+   git rm --cached filename
+   
+4. Clean ignored files:
+   git clean -fdX
+"""
